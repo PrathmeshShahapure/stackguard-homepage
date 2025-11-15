@@ -7,13 +7,12 @@ const Navbar = () => {
   const [isOpen,setIsOpen]=useState(false);
   return (
     <> 
-    <nav className="  px-4 md:px-10 text-lg    bg-[white] flex items-center justify-between  h-9 my-5 ">
-      <div className="flex items-center gap-1 ">
-        <img src={logo} alt="logo" /> StackGuard
-      </div>
+    <nav className="font-dmsans  px-4 md:px-10 text-lg    bg-[white] flex items-center justify-between  h-9 my-5 ">
+      
+      <a className="flex items-center gap-1 outline-none" href="/"><img src={logo} alt="logo" /> StackGuard</a>
+        
      
       <div className="hidden   md:flex gap-5">
-        <a href="">Home</a>
         <a className="text-[#817D7D]" href="">
           Product
         </a>

@@ -1,4 +1,4 @@
-import { useRef, useEffect, React } from "react";
+import { useRef, useEffect, useState, react } from "react";
 import { motion, useInView } from "motion/react";
 import gitIntegrations from "../assets/gitIntegrations.png";
 import lifeCycle from "../assets/icons/lifeCyle.svg";
@@ -8,68 +8,22 @@ import keylogo from "../assets/icons/keylogo.svg";
 import zombielogo from "../assets/icons/zombielogo.svg";
 import ratiologo from "../assets/icons/ratiologo.svg";
 //
-import infrastructure from "../assets/infrastructure.svg";
+import workflow from "../assets/workflow.svg";
 import neverexpires from "../assets/neverexpires.svg";
 import permissions from "../assets/permissions.svg";
 import machineMayhem from "../assets/machineMayhem.svg";
 import Detection from "../assets/Detection.svg";
 import platformCoverage from "../assets/platformCoverage.svg";
+import accordiondata from "../data/accordion.jsx";
+import whyStackbg from "../assets/whyStackbg.svg";
+//
+//
+import Qanda from "../homepageComponents/Qanda.jsx";
 //
 
-const textVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.25,
-      duration: 1.6,
-      delay: 0.4,
-    },
-  },
-};
-const leftbarVariants = {
-  hidden: { x: "-100vw" },
-  show: {
-    x: 0,
-    transition: {
-      type: "spring",
-      bounce: 0.25,
-      duration: 1.6,
-      delay: 0.1,
-    },
-  },
-};
-const imgVariants = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      type: "spring",
-      bounce: 0.25,
-      duration: 1.6,
-      delay: 1.3,
-    },
-  },
-};
-const rigthBarVariants = {
-  hidden: { x: "100vw" },
-  show: {
-    x: 0,
-    transition: { type: "spring", bounce: 0.25, duration: 1.6, delay: 1 },
-  },
-};
 //
 
 const Home = () => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, {
-    amount: 0.6,
-  });
-  useEffect(() => {
-    console.log("view :" + isInView);
-  }, [isInView]);
-
   return (
     <div className="my-5  mt-[120px]  mx-10 border-2 border-[#C0C0C0] ">
       <div className=" mt-10 font-dmsans text-center mx-10 ">
@@ -98,12 +52,12 @@ const Home = () => {
       <div className="mt-5 w-full   ">
         <div className="w-full px-10">
           <img
-            className=" top-50 relative mx-auto  "
-            src={infrastructure}
+            className=" w-full md:w-[90%] lg:w-[80%] top-60 relative mx-auto  "
+            src={workflow}
             alt="infrastructure"
           />
         </div>
-        <div className="mt-5 h-[300px] grid  text-white grid-rows-1 grid-cols-[2fr_1fr_10fr_2fr_1fr_1fr] ">
+        <div className="mt-5 min-h-[300px] grid  text-white grid-rows-1 grid-cols-[2fr_1fr_10fr_2fr_1fr_1fr] ">
           <div className=" bg-linear-to-r from-[#D6ABFF] to-[#A14AEA]"></div>
           <div className="bg-purple-grad "></div>
           <div className="bg-purple-grad "></div>
@@ -177,7 +131,8 @@ const Home = () => {
         <div className="mt-10 flex justify-between">
           <div className=" flex flex-col">
             <ol className="flex flex-col gap-4  ">
-              <li className="w-full min-h-[110px] p-4 flex items-center justify-evenly bg-[#F5EAFF] rounded-tr-xl">
+              <li className=" after:content-[''] after:border-[57px] after:border-t-transparent  after:border-r-transparent  after:border-b-transparent relative  after:absolute after:right-[-108px] rounded-lg
+  after:border-[#F5EAFF] flex min-h-[110px] w-full items-center justify-evenly -tr-xl bg-[#F5EAFF] p-4   ">
                 <div className=" h-10 w-10  bg-[#E8D0FF]  ">
                   <h1 className="pt-2 text-center text-normal text-xl "> 1</h1>
                 </div>
@@ -227,104 +182,37 @@ const Home = () => {
         </div>
       </div>
 
-      <div ref={ref} className="  mt-15 font-geist">
-        <h1 className="text-xl mb-2 md:text-3xl font-medium"> OUR TOP USPs</h1>
+      <div className="mt-40 mx-10 font-dmsans">
+        <h1 className="text-xl mb-2 md:text-3xl font-medium">
+          Why StackGuard
+        </h1>
         <div className="flex gap-2">
-          {/* desktop */}
-          <div
-            className="overflow-x-hidden p-5      
-   hidden md:flex justify-between  items-center   gap-0  md:p-10 w-full   bg-[#D6ABFF5C]  "
-          >
-            <motion.div
-              variants={textVariants}
-              initial="hidden"
-              animate={isInView ? "show" : "hidden"}
-              className=" md:w-auto "
-            >
-              <h1 className=" text-lg md:text-2xl  p-0 m-0">
-                Industry-Leading Deep Scan Technology
+          <div className=" p-5 flex justify-between  items-center    bg-[#D6ABFF5C]  border border-[#DDBCFB]">
+            <div className=" w-[30%]">
+              <h1 className=" text-lg text-[#2C2B2D] md:text-2xl  p-0 m-0">
+                Deep Scan Technology: Faster, Smarter NHI Detection
               </h1>
-              <ul className="text-base md:text-lg pl-8  text-black list-disc ">
-                <li>Detects more</li>
-                <li> faster Smarter accuracy</li>
-                <li>Patent pending innovation</li>
+              <ul className="text-base md:text-lg pl-8  text-[#2C2B2D] list-disc ">
+                <li>Multi-layer detection with regex, heuristics & ML</li>
+                <li>Fast & efficient scanning at scale </li>
+                <li>High accuracy with broader NHI coverage</li>
               </ul>
-            </motion.div>
-            <motion.div
-              variants={leftbarVariants}
-              initial="hidden"
-              animate={isInView ? "show" : "hidden"}
-              className=" h-full  w-[5%]  rounded bg-[#E9C3FFBF]"
-            ></motion.div>
-
-            <motion.div
-              variants={rigthBarVariants}
-              initial="hidden"
-              animate={isInView ? "show" : "hidden"}
-              className="hidden md:block  h-full w-[5%] rounded  bg-[#E9C3FFBF]"
-            ></motion.div>
+            </div>
             <div>
-              <motion.img
-                variants={imgVariants}
-                initial="hidden"
-                animate={isInView ? "show" : "hidden"}
+              <img
                 className=" hidden md:block w-200 rounded-xl"
-                src={gitIntegrations}
+                src={whyStackbg}
                 alt="gitIntegrationPage"
               />
             </div>
+            
           </div>
-          {/* Mobile */}
-          <div
-            className="overflow-x-hidden p-5    
-              flex flex-col    md:hidden   gap-0  md:p-10 w-full   bg-[#D6ABFF5C]  "
-          >
-            <div className="flex justify-between mb-5 ">
-              <motion.div
-                variants={textVariants}
-                initial="hidden"
-                animate={isInView ? "show" : "hidden"}
-                className=" md:w-auto "
-              >
-                <h1 className=" text-lg md:text-2xl  p-0 m-0">
-                  Industry-Leading Deep Scan Technology
-                </h1>
-                <ul className="text-base md:text-lg pl-8  text-black list-disc ">
-                  <li>Detects more</li>
-                  <li> faster Smarter accuracy</li>
-                  <li>Patent pending innovation</li>
-                </ul>
-              </motion.div>
-              <motion.div
-                variants={leftbarVariants}
-                initial="hidden"
-                animate={isInView ? "show" : "hidden"}
-                className=" h-full  w-[5%]  rounded bg-[#E9C3FFBF]"
-              ></motion.div>
-            </div>
-            <div className="flex justify-between gap-1 ">
-              <motion.div
-                variants={rigthBarVariants}
-                initial="hidden"
-                animate={isInView ? "show" : "hidden"}
-                className=" md:hidden h-full w-[5%] rounded  bg-[#E9C3FFBF]"
-              ></motion.div>
-              <div>
-                <motion.img
-                  variants={imgVariants}
-                  initial="hidden"
-                  animate={isInView ? "show" : "hidden"}
-                  className="  md:hidden w-75 rounded-xl"
-                  src={gitIntegrations}
-                  alt="gitIntegrationPage"
-                />
-              </div>
-            </div>
-          </div>
+               <div className="   w-[5%]  rounded bg-[#E9C3FFBF]">{""}</div>
+                <div className="  w-[5%] rounded  bg-[#E9C3FFBF]"> {""}</div>
         </div>
       </div>
 
-      <div className="mt-10 font-dmsans  mx-5 mb-[500px]   ">
+      <div className="mt-40 mx-10 font-dmsans      ">
         <div className="w-[55%] my-10 mx-auto ">
           <h1 className="text-3xl font-medium text-[#383838]">
             Breadth of Platform Coverage
@@ -347,16 +235,19 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-10 mx-10 h-[600px] flex justify-between border border-black font-dmsans  ">
-        <div>
+      <div className="my-40 mx-10 h-[500px] flex justify-between font-dmsans  ">
+        <div className="w-[40%]">
           <h1 className="text-3xl font-normal color-[#303030] ">
             Frequently asked questions
           </h1>
         </div>
 
-        <div>
-
-          
+        <div className="w-[65%]">
+          <ul>
+            {accordiondata.map((item) => (
+              <Qanda key={item.id} question={item.question} ans={item.answer} />
+            ))}
+          </ul>
         </div>
       </div>
     </div>

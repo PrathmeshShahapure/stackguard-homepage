@@ -38,14 +38,13 @@ const Navbar = () => {
     </nav>
 
      {isOpen && (
-        <div className="md:hidden w-full x-1 mt-3 flex flex-col gap-3 bg-white border-t border-gray-200 py-4">
-          <a href="#" className="px-4">Home</a>
+        <div className="md:hidden font-dmsans w-full x-1 mt-3 flex flex-col gap-3 bg-white border-t border-gray-200 py-4">
           <a href="#" className="px-4 text-[#817D7D]">Product</a>
           <a href="#" className="px-4 text-[#817D7D]">Resources</a>
           <a href="#" className="px-4 text-[#817D7D]">About us</a>
           <a href="#" className="px-4 text-[#817D7D]">Contact us</a>
           <button
-            className="mt-2  mx-4 text-base py-2 rounded-full text-white bg-[#44087D]"
+            className="mt-2 font-dmsans  mx-4 text-base py-2 rounded-full text-white bg-[#44087D]"
             type="button"
           >
             Book a demo

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import logo from "../assets/icons/Weblogo.svg";
 import { IoIosMenu,IoMdClose } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
 
@@ -9,23 +10,23 @@ const Navbar = () => {
     <> 
     <nav className="font-dmsans  px-4 md:px-10 text-lg    bg-[white] flex items-center justify-between  h-9 my-5 ">
       
-      <a className="flex items-center gap-1 outline-none" href="/"><img src={logo} alt="logo" /> StackGuard</a>
+      <Link to="/" onClick={()=>setIsOpen(false)} className="flex items-center gap-1 outline-none" ><img src={logo} alt="logo" /> StackGuard</Link>
         
      
       <div className="hidden   md:flex gap-5">
-        <a className="text-[#817D7D]" href="">
+        <Link  to="/product" className="text-[#817D7D]">
           Product
-        </a>
-        <a className="text-[#817D7D]" href="">
+        </Link>
+        <Link to="/resources"  className="text-[#817D7D]" >
           Resources
-        </a>
-        <a className="text-[#817D7D]" href="">
+        </Link>
+        <Link to="/aboutus" className="text-[#817D7D]" >
           About us
-        </a>
+        </Link>
       </div>
 
       <div className=" hidden md:flex items-center gap-5">
-        <a className="" href="">Contack us</a>
+        <Link to="/contactus" className="" >Contact us</Link>
         <button className="max-sm:text-xs   text-sm p-3 rounded-full text-white bg-[#44087D]" type="button">Book a demo </button>
       </div>
       
@@ -39,10 +40,10 @@ const Navbar = () => {
 
      {isOpen && (
         <div className="md:hidden font-dmsans w-full x-1 mt-3 flex flex-col gap-3 bg-white border-t border-gray-200 py-4">
-          <a href="#" className="px-4 text-[#817D7D]">Product</a>
-          <a href="#" className="px-4 text-[#817D7D]">Resources</a>
-          <a href="#" className="px-4 text-[#817D7D]">About us</a>
-          <a href="#" className="px-4 text-[#817D7D]">Contact us</a>
+          <Link to="/product" onClick={()=>setIsOpen(false)} className="px-4 text-[#817D7D]">Product</Link>
+          <Link to="/resources" className="px-4 text-[#817D7D]">Resources</Link>
+          <Link to="/aboutus" className="px-4 text-[#817D7D]">About us</Link>
+          <Link to="/contactus" className="px-4 text-[#817D7D]">Contact us</Link>
           <button
             className="mt-2 font-dmsans  mx-4 text-base py-2 rounded-full text-white bg-[#44087D]"
             type="button"

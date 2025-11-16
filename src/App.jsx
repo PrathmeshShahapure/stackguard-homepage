@@ -4,7 +4,7 @@ import Navbar from "./components/Navbar";
 import Promo from "./components/Promo";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
-import Product from "./pages/Product";
+import Platform from "./pages/Platform";
 
 function App() {
   return (
@@ -17,10 +17,10 @@ function App() {
      
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/product" element={<Product />} />
+        <Route path="/product" element={<Platform />} />
       </Routes>
       
-      <Footer />
+      
     </div>
   );
 }

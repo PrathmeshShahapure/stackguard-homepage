@@ -4,9 +4,10 @@ import blastRaius from "../assets/productpgSS/blastRadius.svg";
 import git from "../assets/productpgSS/git.svg";
 import adminPriv from "../assets/productpgSS/adminPriv.svg";
 import sysOverview from "../assets/productpgSS/sysOverview.svg";
-
-const Product = () => {
+import Footer from "../components/Footer";
+const Platform = () => {
   return (
+    <>
     <div className="my-5  mt-[120px] mx-10 font-dmsans border-2 border-[#C0C0C0] ">
       <div className=" mt-10  text-center mx-10 ">
         <h1 className=" font-medium text-3xl  md:text-5xl  lg:text-6xl  m-2 ">
@@ -138,7 +139,9 @@ const Product = () => {
         </ul>
       </div>
     </div>
-  );
+    <Footer bgclass="bg-[#200639]" btnColor="bg-[#F6CB12]" />
+   </>
+      );
 };
 
-export default Product;
+export default Platform;

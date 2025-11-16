@@ -1,17 +1,17 @@
 import React from "react";
 import footerlogo from "../assets/footerlogo.svg";
-import linkedin from "../assets/linkedin.svg"
-import ArrowUp from "../assets/ArrowUp.svg"
-const Footer = () => {
+import linkedin from "../assets/linkedin.svg";
+import ArrowUp from "../assets/ArrowUp.svg";
+const Footer = ({ bgclass, btnColor }) => {
   return (
-    <div className="w-full md:px-10 pt-5 h-[250px] bg-[#44087D] font-dmsans">
+    <div className={`${bgclass}   w-full md:px-10 pt-5 h-[250px]  font-dmsans`}>
       <div className="flex justify-between items-center text-[#FFFFFF] ">
         <div className="flex items-center gap-2">
           <img className="w-10" src={footerlogo} alt="logo" />
           <h1 className="text-xl font-normal"> StackGuard</h1>
         </div>
         <button
-          className="p-2 px-4 rounded-full font-inter text-xs bg-[#ffffff] text-[#292B22]"
+          className={`${btnColor}  ${btnColor === "bg-[#F6CB12]"? "font-semibold":"font-normal" } p-2 px-4 rounded-full font-inter text-xs  text-[#292B22]`}
           type="button"
         >
           Make an appointment
@@ -21,29 +21,29 @@ const Footer = () => {
       <div className="grid grid-cols-4 text-[#FFFFFF] text-xs">
         <div className=" spacing-y-10">
           <h1 className="">Address</h1>
-          <p className="mt-2">Dummy address  </p>
-          <p className="">Dummy address  </p>
+          <p className="mt-2">Dummy address </p>
+          <p className="">Dummy address </p>
 
           <p className="mt-4">© 2025 — Stackgaurd</p>
         </div>
-        <div className="">
+        <div className=" ">
           <h1 className="">Info</h1>
           <p className="mt-2">Platform </p>
-          <p className="">About Us  </p>
+          <p className="">About Us </p>
           <p className="">Contact Us </p>
-
-        
         </div>
         <div className="">
           <h1 className="">Contact us</h1>
-          <p className="mt-2">+1 891 989-11-91  </p>
-          <p className="">help@logoipsum.com  </p>
-
-         
+          <p className="mt-2">+1 891 989-11-91 </p>
+          <p className="">help@logoipsum.com </p>
         </div>
         <div className=" justify-self-end flex flex-col items-center gap-4 ">
-         <img className="w-8" src={linkedin} alt="linkedIn" />
-         <img  className="p-5 px-6 text-lg bg-white rounded-full" src={ArrowUp} alt="goUP" />
+          <img className="w-8" src={linkedin} alt="linkedIn" />
+          <img
+            className="p-5 px-6 text-lg bg-white rounded-full"
+            src={ArrowUp}
+            alt="goUP"
+          />
         </div>
       </div>
     </div>

@@ -15,7 +15,7 @@ const Navbar = () => {
      
       <div className="hidden   md:flex gap-5">
         <Link  to="/product" className="text-[#817D7D]">
-          Product
+          Platform
         </Link>
         <Link to="/resources"  className="text-[#817D7D]" >
           Resources

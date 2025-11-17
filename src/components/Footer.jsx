@@ -2,6 +2,7 @@ import React from "react";
 import footerlogo from "../assets/footerlogo.svg";
 import linkedin from "../assets/linkedin.svg";
 import ArrowUp from "../assets/ArrowUp.svg";
+import { MdOutlineMail,MdLocationOn  } from "react-icons/md";
 const Footer = ({ bgclass, btnColor }) => {
   return (
     <div className={`${bgclass}   w-full md:px-10 pt-5 h-[250px]  font-dmsans`}>
@@ -21,12 +22,12 @@ const Footer = ({ bgclass, btnColor }) => {
       <div className="grid grid-cols-4 text-[#FFFFFF] text-xs">
         <div className=" spacing-y-10">
           <h1 className="">Address</h1>
-          <p className="mt-2">Dummy address </p>
-          <p className="">Dummy address </p>
+          <p className=" flex items-center  gap-1 my-2"><MdLocationOn className="text-[15px]" /> Singapore </p>
+          <p className=" flex items-center gap-1"><MdLocationOn className="text-[15px]"  />India </p>
 
           <p className="mt-4">© 2025 — Stackgaurd</p>
         </div>
-        <div className=" ">
+        <div className="leading-loose">
           <h1 className="">Info</h1>
           <p className="mt-2">Platform </p>
           <p className="">About Us </p>
@@ -34,8 +35,7 @@ const Footer = ({ bgclass, btnColor }) => {
         </div>
         <div className="">
           <h1 className="">Contact us</h1>
-          <p className="mt-2">+1 891 989-11-91 </p>
-          <p className="">help@logoipsum.com </p>
+          <p className="flex gap-1 items-center mt-2"> <MdOutlineMail />  contact@stackguard.io</p>
         </div>
         <div className=" justify-self-end flex flex-col items-center gap-4 ">
           <img className="w-8" src={linkedin} alt="linkedIn" />

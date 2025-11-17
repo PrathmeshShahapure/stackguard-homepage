@@ -8,7 +8,7 @@ const Navbar = () => {
   const [isOpen,setIsOpen]=useState(false);
   return (
     <> 
-    <nav className="font-dmsans  px-4 md:px-10 text-lg    bg-[white] flex items-center justify-between  h-9 my-5 ">
+    <nav className="font-dmsans text-[22px] px-4 md:px-10    bg-[white] flex items-center justify-between  h-9 my-5 ">
       
       <Link to="/" onClick={()=>setIsOpen(false)} className="flex items-center gap-1 outline-none" ><img src={logo} alt="logo" /> StackGuard</Link>
         
@@ -27,7 +27,7 @@ const Navbar = () => {
 
       <div className=" hidden md:flex items-center gap-5">
         <Link to="/contactus" className="" >Contact us</Link>
-        <button className="max-sm:text-xs   text-sm p-3 rounded-full text-white bg-[#44087D]" type="button">Book a demo </button>
+        <button className="text-[18px] px-3 py-2 rounded-full text-white bg-[#44087D]" type="button">Book a demo </button>
       </div>
       
       <button className="md:hidden " 

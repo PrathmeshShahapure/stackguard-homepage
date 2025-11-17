@@ -3,16 +3,16 @@ import footerlogo from "../assets/footerlogo.svg";
 import linkedin from "../assets/linkedin.svg";
 import ArrowUp from "../assets/ArrowUp.svg";
 import { MdOutlineMail,MdLocationOn  } from "react-icons/md";
-const Footer = ({ bgclass, btnColor }) => {
+const Footer = () => {
   return (
-    <div className={`${bgclass}   w-full md:px-10 pt-5 h-[250px]  font-dmsans`}>
+    <div className={` bg-[#44087D] w-full md:px-10 pt-5 h-[250px]  font-dmsans`}>
       <div className="flex justify-between items-center text-[#FFFFFF] ">
         <div className="flex items-center gap-2">
           <img className="w-10" src={footerlogo} alt="logo" />
           <h1 className="text-xl font-normal"> StackGuard</h1>
         </div>
         <button
-          className={`${btnColor}  ${btnColor === "bg-[#F6CB12]"? "font-semibold":"font-normal" } p-2 px-4 rounded-full font-inter text-xs  text-[#292B22]`}
+          className={` bg-[#FFFFFF] p-2 px-4 rounded-full font-inter text-xs  text-[#292B22]`}
           type="button"
         >
           Make an appointment

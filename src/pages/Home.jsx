@@ -457,7 +457,7 @@ const Home = () => {
         </div>
       </div>
     </div>
-    <Footer bgclass="bg-[#44087D]" btnColor="bg-[#FFFFFF]"/>
+    <Footer />
     </>
   );
 };

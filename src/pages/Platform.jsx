@@ -78,8 +78,8 @@ const Platform = () => {
                   team exactly what to fix and why—no guesswork, no noise.
                 </p>
               </div>
-              <div className="">
-                <img src={blastRaius} alt="findingForServerImg" />
+              <div className="order-first">
+                <img src={blastRaius} alt="blastRaius" />
               </div>
             </li>
             <li className=" my-40 flex justify-between">
@@ -95,7 +95,7 @@ const Platform = () => {
                 </p>
               </div>
               <div className="">
-                <img src={git} alt="findingForServerImg" />
+                <img src={git} alt="gitImg" />
               </div>
             </li>
             <li className=" my-40 flex justify-between">
@@ -115,8 +115,8 @@ const Platform = () => {
                   shared in chat tools like Slack or Teams.
                 </p>
               </div>
-              <div className="">
-                <img src={adminPriv} alt="findingForServerImg" />
+              <div className="order-first">
+                <img src={adminPriv} alt="adminPrivImg" />
               </div>
             </li>
             {/*  */}
@@ -138,7 +138,7 @@ const Platform = () => {
                 </p>
               </div>
               <div className="">
-                <img src={sysOverview} alt="findingForServerImg" />
+                <img src={sysOverview} alt="sysOverviewImg" />
               </div>
             </li>
           </ul>

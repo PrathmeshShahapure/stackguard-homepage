@@ -11,8 +11,7 @@ const Platform = () => {
       <div className="my-5  mt-[120px] mx-[72px] font-dmsans border-2 border-[#C0C0C0] ">
         <div className=" mt-10 font-dmsans text-center mx-10 ">
           <h1 className=" font-medium text-[64px] mb-6 leading-none ">
-            AI-powered Security for <br /> Non-Human Identities (NHIs) and
-            Secrets
+           Remediation first-NHI platform
           </h1>
           <p className=" text-[22px] mb-[52px]  font-normal mt-2 ">
             50:1. That's the ratio of non-human to human identities. Your
@@ -108,7 +107,7 @@ const Platform = () => {
                   StackGuard’s Reporting delivers clear, executive-ready
                   summaries of NHI risk across your entire environment showing
                   what was discovered, what was remediated, and how quickly
-                  critical issues were fixed with AI-powered remediation. At the
+                  critical issues were fixed with AI-powered remediation. <br /> At the
                   same time, NHI Governance ensures problems never reach
                   production by enforcing CI Gating to block risky identities
                   during builds and automatically anonymizing or blocking NHIs
@@ -130,7 +129,9 @@ const Platform = () => {
                   StackGuard’s Reporting delivers clear, executive-ready
                   summaries of NHI risk across your entire environment showing
                   what was discovered, what was remediated, and how quickly
-                  critical issues were fixed with AI-powered remediation. At the
+                  critical issues were fixed with AI-powered remediation. 
+                  
+                   <br />At the
                   same time, NHI Governance ensures problems never reach
                   production by enforcing CI Gating to block risky identities
                   during builds and automatically anonymizing or blocking NHIs

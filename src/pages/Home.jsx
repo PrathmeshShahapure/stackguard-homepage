@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState, react } from "react";
+import {  react } from "react";
 
 import workflow from "../assets/workflow.svg";
 import neverexpires from "../assets/neverexpires.svg";
@@ -6,9 +6,10 @@ import permissions from "../assets/permissions.svg";
 import machineMayhem from "../assets/machineMayhem.svg";
 import Detection from "../assets/Detection.svg";
 import platformCoverage from "../assets/platformCoverage.svg";
-import accordiondata from "../data/accordion.jsx";
 import whyStackbg from "../assets/whyStackbg.svg";
-import homepgbg from "../assets/homepgbg.svg";
+
+import googleCloudImg from "../assets/platformCoverageIcons/googleCloudImg.svg"
+import entraImg from "../assets/platformCoverageIcons/entraImg.svg"
 
 import Qanda from "../homepageComponents/Qanda.jsx";
 import Footer from "../components/Footer.jsx";
@@ -48,8 +49,8 @@ const Home = () => {
 
      
         <div
-          className="h-[455px] relative top-60 bg-cover bg-no-repeat "
-          style={{ backgroundImage: `url(${homepgbg})` }}
+          className="h-[455px] bg-[#8B50C4] relative top-60 bg-cover bg-no-repeat "
+           
         ></div>
       </div>
 
@@ -207,7 +208,7 @@ const Home = () => {
       </div>
 
       <div className="mt-40 mx-[55px] font-dmsans ">
-        <div className="w-[55%] my-10  ">
+        <div className="w-[60%] my-10  ">
           <h1 className="text-[40px] mb-8 font-medium text-[#383838]">
             Breadth of Platform Coverage
           </h1>
@@ -221,11 +222,224 @@ const Home = () => {
         </div>
 
         <div>
-          <img
-            className="mx-auto w-full"
-            src={platformCoverage}
-            alt="platformCoverageImg"
-          />
+          <div className="grid grid-cols-4 gap-y-14 gap-1">
+            <div>
+             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+              
+             </div>
+             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
+            </div>
+            {/* 2 */}
+            <div>
+             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+              
+             </div>
+             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
+            </div>
+            {/* 3 */}
+            <div>
+             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+              
+             </div>
+             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
+            </div>
+              {/* 4*/}
+            <div>
+             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+              
+             </div>
+             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
+            </div>
+            {/* //2 */}
+            <div>
+             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+              
+             </div>
+             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
+            </div>
+            {/* 2 */}
+            <div>
+             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+              
+             </div>
+             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
+            </div>
+            {/* 3 */}
+            <div>
+             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+              
+             </div>
+             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
+            </div>
+              {/* 4*/}
+            <div>
+             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              </div>
+              
+             </div>
+             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
+            </div>
+          </div>
+         
         </div>
       </div>
 

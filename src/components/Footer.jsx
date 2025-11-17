@@ -40,7 +40,7 @@ const Footer = ({ bgclass, btnColor }) => {
         <div className=" justify-self-end flex flex-col items-center gap-4 ">
           <img className="w-8" src={linkedin} alt="linkedIn" />
           <img
-            className="p-5 px-6 text-lg bg-white rounded-full"
+            className="h-10 w-10 p-2 text-sm bg-white rounded-full"
             src={ArrowUp}
             alt="goUP"
           />

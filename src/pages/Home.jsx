@@ -1,4 +1,5 @@
 import {  react } from "react";
+import { Link } from "react-router-dom";
 
 import workflow from "../assets/workflow.svg";
 import neverexpires from "../assets/neverexpires.svg";
@@ -34,12 +35,12 @@ const Home = () => {
           >
             Book a demo
           </button>
-          <button
-            className="px-2  md:px-4 h-10   text-lg  rounded-full text-black border border-[#44087D]"
+          <Link  to="/riskassessment"
+            className="px-2 py-1 md:px-4 h-10   text-lg  rounded-full text-black border border-[#44087D]"
             type="button"
           >
             Book a risk free assessment
-          </button>
+          </Link>
         </div>
       </div>
       <div className="relative w-full mt-30">
@@ -180,7 +181,7 @@ const Home = () => {
       <div className="mt-40 mx-[55px] font-dmsans">
         <h1 className="text-[40px] mb-5  font-medium">Why StackGuard</h1>
         <div className="flex gap-2">
-          <div className=" p-5 flex justify-between    bg-[#D6ABFF2E]  border border-[#DDBCFB]">
+          <div className=" p-5 w-[90vw] flex justify-between    bg-[#D6ABFF2E]  border border-[#DDBCFB]">
             <div className=" w-[30%] flex flex-col justify-between">
               <div>
                 <h1 className=" text-[24px] text-[#2C2B2D]   p-0 m-0">
@@ -194,7 +195,7 @@ const Home = () => {
               </div>
               <h1 className="text-[#2C2B2D] text-[20px] ">Read More</h1>
             </div>
-            <div>
+            <div className="">
               <img
                 className=" hidden md:block w-200 rounded-xl"
                 src={whyStackbg}

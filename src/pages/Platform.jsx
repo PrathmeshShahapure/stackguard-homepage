@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 const Platform = () => {
   return (
     <>
-      <div className="my-5  mt-[120px] mx-[72px] font-dmsans border-2 border-[#C0C0C0] ">
+      <div className="my-5  mt-[120px] mx-[54px] font-dmsans">
         <div className=" mt-10 font-dmsans text-center mx-10 ">
           <h1 className=" font-medium text-[64px] mb-6 leading-none ">
            Remediation first-NHI platform
@@ -34,7 +34,7 @@ const Platform = () => {
           </div>
         </div>
 
-        <div className="my-40 mx-[46px]">
+        <div className="my-40 ">
           <ul>
             <li className="my-40 flex justify-between">
               <div className="w-[40%] space-y-4">

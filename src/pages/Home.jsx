@@ -11,6 +11,22 @@ import whyStackbg from "../assets/whyStackbg.svg";
 
 import googleCloudImg from "../assets/platformCoverageIcons/googleCloudImg.svg"
 import entraImg from "../assets/platformCoverageIcons/entraImg.svg"
+import Okta from "../assets/platformCoverageIcons/Okta.svg"
+import azureActiveLogo from "../assets/platformCoverageIcons/azureActiveLogo.svg"
+import circleciLogo from "../assets/platformCoverageIcons/circleciLogo.svg"
+import gitHub from "../assets/platformCoverageIcons/gitHub.svg"
+import azureLogo from "../assets/platformCoverageIcons/azureLogo.svg"
+import jenkinsLogo from "../assets/platformCoverageIcons/jenkinsLogo.svg"
+import ecrLogo from "../assets/platformCoverageIcons/ecrLogo.svg"
+import dockerLogo from "../assets/platformCoverageIcons/docker.svg"
+import awsLogo from "../assets/platformCoverageIcons/awsLogo.svg"
+import OracleCloudLogo from "../assets/platformCoverageIcons/OracleCloudLogo.svg"
+import GCSLogo from "../assets/platformCoverageIcons/GCSLogo.svg"
+import S3Logo from "../assets/platformCoverageIcons/S3Logo.svg"
+import azureblobLogo from "../assets/platformCoverageIcons/azureblobLogo.svg"
+import onedriveLogo from "../assets/platformCoverageIcons/onedriveLogo.svg"
+import bitbucketLogo from "../assets/platformCoverageIcons/bitbucketLogo.svg"
+import gitlabLogo from "../assets/platformCoverageIcons/gitlabLogo.svg"
 
 import Qanda from "../homepageComponents/Qanda.jsx";
 import Footer from "../components/Footer.jsx";
@@ -225,26 +241,27 @@ const Home = () => {
         <div>
           <div className="grid grid-cols-4 gap-y-14 gap-1">
             <div>
-             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
+             <div className="w-full mb-1 flex justify-between p-2 bg-[#F2F2F2]">
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col justify-center items-center">
               <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
               <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
               </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col justify-center items-center">
+              <img className="w-12" src={entraImg} alt="entraImg" />
               <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
               </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col justify-center items-center">
+              <img className="w-12" src={Okta} alt="Okta" />
+              <p className=" text-[7px] text-center font-medium">Okta</p>
               </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col justify-center items-center">
+              <img className="w-12 p-1" src={azureActiveLogo} alt="azureActiveLogo" />
+              <p className=" text-[7px] text-center font-medium">Active 
+ <br />  directory</p>
               </div>
               
              </div>
@@ -252,138 +269,140 @@ const Home = () => {
             </div>
             {/* 2 */}
             <div>
-             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
+             <div className="w-full mb-1 flex justify-between p-2 bg-[#F2F2F2]">
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
+              <img className="w-12 mb-1" src={circleciLogo} alt="circleciLogo" />
+              <p className=" text-[7px] text-center font-medium">CircleCI </p>
               </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
+              <img className="w-12 mb-1" src={gitHub} alt="gitHub" />
+              <p className=" text-[7px] text-center font-medium">Github </p>
               </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col justify-center items-center">
+              <img className="w-15 mb-3" src={azureLogo} alt="azureLogo" />
+              <p className=" text-[7px] text-center font-medium">Azure devOps</p>
               </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col justify-center items-center">
+              <img className="w-10 p-1" src={jenkinsLogo} alt="jenkinsLogo" />
+              <p className=" text-[7px] text-center font-medium">Jenkins</p>
               </div>
               
              </div>
-             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
+             <h1 className=" text-[13px] font-medium text-center">DevOps tools & CI/CD pipelines</h1>
             </div>
             {/* 3 */}
             <div>
-             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
+             <div className="w-full mb-1 flex justify-between p-2 bg-[#F2F2F2]">
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
+              <img className="w-12" src={ecrLogo} alt="ecrLogo" />
+              <p className=" text-[7px] text-center font-medium">  ECR</p>
               </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
+              <img className="w-15 mb-3" src={azureLogo} alt="AzureLogo" />
+              <p className=" text-[7px] text-center font-medium">Azure</p>
               </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
+              <img className="w-12" src={dockerLogo} alt="Docker" />
+              <p className=" text-[7px] text-center font-medium">Docker</p>
               </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col justify-center items-center">
+              <img className="w-12" src={Okta} alt="OktaLogo" />
+              <p className=" text-[7px] text-center font-medium">Okta</p>
               </div>
               
              </div>
-             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
+             <h1 className=" text-[13px] font-medium text-center">Container registries</h1>
             </div>
               {/* 4*/}
             <div>
-             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
+             <div className="w-full mb-1 flex justify-between p-2 bg-[#F2F2F2]">
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
+              <img className="w-12 mb-2" src={awsLogo} alt="awsLogo" />
+              <p className=" text-[7px] text-center font-medium">  AWS</p>
               </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
+              <img className="w-15 mb-2" src={azureLogo} alt="AzureLogo" />
+              <p className=" text-[7px] text-center font-medium">Azure</p>
               </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
+              <img className="w-12 " src={googleCloudImg} alt="googleCloudImg" />
+              <p className=" text-[7px] text-center font-medium"> GCP</p>
               </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
+              <img className="w-12 mb-3" src={OracleCloudLogo} alt="OracleCloudLogo" />
+              <p className=" text-[7px] text-center font-medium"> OCI</p>
               </div>
               
              </div>
-             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
+             <h1 className=" text-[13px] font-medium text-center">Cloud infrastructure analysis</h1>
             </div>
             {/* //2 */}
             <div>
-             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
+             <div className="w-full mb-1 flex justify-between p-2 bg-[#F2F2F2]">
 
               <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <img className="w-12 mb-2" src={azureblobLogo} alt="azureblobLogo" />
+              <p className=" text-[7px] text-center font-medium">GCS</p>
               </div>
 
               <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <img className="w-12 p-1" src={S3Logo} alt="S3logo" />
+              <p className=" text-[7px] text-center font-medium">S3</p>
+              </div>
+             
+               <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
+              <img className="w-12" src={azureblobLogo} alt="azureblobLogo" />
+              <p className=" text-[7px] text-center font-medium">Azure blob</p>
               </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <div className="w-[74px] h-[74px]  bg-[#FFFFFF] flex justify-center flex-col items-center">
+              <img className="w-12 mb-1" src={onedriveLogo} alt="onedriveLogo" />
+              <p className=" text-[7px] text-center font-medium">One drive</p>
               </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
-              </div>
+              
               
              </div>
-             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
+             <h1 className=" text-[13px] font-medium text-center">Cloud storage and buckets</h1>
             </div>
             {/* 2 */}
             <div>
-             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
+             <div className="w-full mb-1 flex justify-between p-2 bg-[#F2F2F2]">
 
               <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <img className="w-12 mb-1 " src={gitHub} alt="github" />
+              <p className=" text-[7px] text-center font-medium">GitHub</p>
               </div>
 
               <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <img className="w-12 mb-1 " src={bitbucketLogo} alt="BitbucketLogo" />
+              <p className=" text-[7px] text-center font-medium">Bitbucket</p>
               </div>
 
               <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <img className="w-12 mb-1 " src={googleCloudImg} alt="AzurerepoLogo" />
+              <p className=" text-[7px]  text-center font-medium">Azure repost</p>
               </div>
 
               <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
+              <img className="w-12 mb-1" src={gitlabLogo} alt="GitlabLogo" />
+              <p className=" text-[7px] text-center font-medium">  Gitlab</p>
               </div>
               
              </div>
-             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
+             <h1 className=" text-[13px] font-medium text-center">Version control system</h1>
             </div>
             {/* 3 */}
             <div>

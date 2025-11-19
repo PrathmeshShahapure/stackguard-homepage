@@ -1,5 +1,5 @@
 import React from "react";
-import blueBox from "../assets/riskAssPgAssests/blueBox.svg";
+import blueBox from "../assets/riskAssPgAssests/bluebox.svg";
 import screenshort from "../assets/riskAssPgAssests/screenshort.svg";
 import clidpboard from "../assets/riskAssPgAssests/clipboard.svg";
 import Group from "../assets/riskAssPgAssests/Group.svg";

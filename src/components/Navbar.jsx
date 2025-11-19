@@ -27,7 +27,7 @@ const Navbar = () => {
 
       <div className=" hidden md:flex items-center gap-5">
         <Link to="/contactus" className="" >Contact us</Link>
-        <button className="text-[18px] px-3 py-2 rounded-full text-white bg-[#44087D]" type="button">Book a demo </button>
+        <button className="text-[18px] w-[66px] px-3 py-1 rounded-full text-white bg-[#44087D]" type="button">Risk </button>
       </div>
       
       <button className="md:hidden " 
@@ -48,7 +48,7 @@ const Navbar = () => {
             className="mt-2 font-dmsans  mx-4 text-base py-2 rounded-full text-white bg-[#44087D]"
             type="button"
           >
-            Book a demo
+            Risk
           </button>
         </div>
       )}

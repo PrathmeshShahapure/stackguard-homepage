@@ -6,8 +6,9 @@ import neverexpires from "../assets/neverexpires.svg";
 import permissions from "../assets/permissions.svg";
 import machineMayhem from "../assets/machineMayhem.svg";
 import Detection from "../assets/Detection.svg";
-import platformCoverage from "../assets/platformCoverage.svg";
 import whyStackbg from "../assets/whyStackbg.svg";
+
+import arrowRightList from "../assets/icons/arrowRightList.svg"; 
 
 import googleCloudImg from "../assets/platformCoverageIcons/googleCloudImg.svg"
 import entraImg from "../assets/platformCoverageIcons/entraImg.svg"
@@ -45,33 +46,28 @@ const Home = () => {
           accounts, keys, and tokens dominate your attack surface
         </p>
         <div className="flex justify-center gap-2 my-4">
-          <button
-            className="px-2 md:px-4  h-10  text-lg   rounded-full text-white bg-[#44087D]"
-            type="button"
-          >
-            Book a demo
-          </button>
+         
           <Link  to="/riskassessment"
-            className="px-2 py-1 md:px-4 h-10   text-lg  rounded-full text-black border border-[#44087D]"
+            className="px-2 py-1 md:px-4 h-10 font-medium  text-[19px]  rounded-full text-black border border-[#44087D]"
             type="button"
           >
-            Book a risk free assessment
+            Get a free risk assessment
           </Link>
         </div>
       </div>
-      <div className="relative w-full mt-30">
+      <div className="relative w-full mt-14">
         <div className="absolute top-0 left-0 w-full px-10 z-10">
-          <img src={workflow} alt="workflow" className="w-[90%] mx-auto" />
+          <img src={workflow} alt="workflow" className="w-full mx-auto" />
         </div>
 
      
         <div
-          className="h-[455px] bg-[#8B50C4] relative top-60 bg-cover bg-no-repeat "
+          className="h-[455px] bg-[#8B50C4] relative top-100 bg-cover bg-no-repeat "
            
         ></div>
       </div>
 
-      <div className="w-full mt-60 h-25 bg-[repeating-linear-gradient(to_right,#C0C0C0_0px,#C0C0C0_2px,transparent_1px,transparent_8px)] border border-[#C0C0C0]"></div>
+      <div className="w-full mt-100 h-25 bg-[repeating-linear-gradient(to_right,#C0C0C0_0px,#C0C0C0_2px,transparent_1px,transparent_8px)] border border-[#C0C0C0]"></div>
 
       <div className="mt-40 mx-[55px] font-dmsans">
         <div>
@@ -101,7 +97,7 @@ const Home = () => {
           </div>
           <div className="p-3 gap-4 flex flex-col justify-between rounded-lg  shadow-[6px_0_12px_rgba(0,0,0,0.1)] border border-[#9E9E9E3D]">
             <div>
-              <h1 className=" text-xl  font-medium">Overprivileged access</h1>
+              <h1 className=" text-[24px]  font-medium">Overprivileged access</h1>
               <p className=" text-sm ">
                 NHIs are often granted more access than they need. It's an
                 easily preventable breach waiting to occur.
@@ -200,16 +196,16 @@ const Home = () => {
           <div className=" p-5 w-[90vw] flex justify-between    bg-[#D6ABFF2E]  border border-[#DDBCFB]">
             <div className=" w-[30%] flex flex-col justify-between">
               <div>
-                <h1 className=" text-[24px] text-[#2C2B2D]   p-0 m-0">
-                  Deep Scan Technology: Faster, Smarter NHI Detection
+                <h1 className=" text-[24px] font-medium text-[#2C2B2D]   p-0 m-0">
+                  Deep Scan Technology: <br /> <span className="font-normal italic"> Faster, Smarter NHI Detection</span>
                 </h1>
-                <ul className="text-[20px] pl-8  text-[#2C2B2D] list-disc ">
-                  <li>Multi-layer detection with regex, heuristics & ML</li>
-                  <li>Fast & efficient scanning at scale </li>
-                  <li>High accuracy with broader NHI coverage</li>
+                <ul className="mt-[39px] text-[20px]  text-[#2C2B2D]  ">
+                  <li className="flex items-start gap-2"> <img className="mt-2" src={arrowRightList} alt="arrow"/> Multi-layer detection with regex, heuristics & ML</li>
+                  <li className="flex items-start gap-2"> <img className="mt-2" src={arrowRightList} alt="arrow"/>Fast & efficient scanning at scale </li>
+                  <li className="flex items-start gap-2"> <img className="mt-2" src={arrowRightList} alt="arrow"/>High accuracy with broader NHI coverage</li>
                 </ul>
               </div>
-              <h1 className="text-[#2C2B2D] text-[20px] ">Read More</h1>
+              <h1 className="text-[#2C2B2D] w-[104px] text-center text-[16px] bg-[#C8A3E957] border border-[#C8A3E957]">Read More</h1>
             </div>
             <div className="">
               <img

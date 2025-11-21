@@ -1,4 +1,4 @@
-import {  react } from "react";
+import { useState,useEffect } from "react"; 
 import { Link } from "react-router-dom";
 
 import workflow from "../assets/workflow.svg";
@@ -34,6 +34,24 @@ import Footer from "../components/Footer.jsx";
 
 
 const Home = () => {
+   const [activeIndex, setActiveIndex] = useState(1);
+   const sections = [
+    { id: 1, title: "Service Accounts" },
+    { id: 2, title: "DevOps Tools" },
+    { id: 3, title: "Container registries" },
+    { id: 4, title: "Cloud infrastructure analysis" },
+    { id: 5, title: "Cloud storage and buckets" },
+    { id: 6, title: "Version control system" },
+  ];
+  useEffect(()=>{
+    const interval = setInterval(()=>{
+      setActiveIndex((prev)=> (prev+1) % 3  );
+    },2000)
+    return () => clearInterval(interval);
+  },[])
+
+  console.log(activeIndex);
+
   return (
     <> 
     <div className="my-5  mt-[120px]   ">
@@ -220,244 +238,236 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="mt-40 mx-[55px] font-dmsans ">
-        <div className="w-[60%] my-10  ">
-          <h1 className="text-[40px] mb-8 font-medium text-[#383838]">
-            Breadth of Platform Coverage
-          </h1>
-          <p className=" mt-2 text-[28px] font-normal text-[#000000]">
-            Secure your entire modern environment from code to cloud. Stackguard
-            offers unparalleled Breadth of Platform Coverage, seamlessly
-            integrating with major Version Control Systems, CI/CD pipelines,
-            Cloud platforms and Storage (AWS, Azure, GCP, etc.), Chat & SaaS
-            applications for a unified security view.
-          </p>
+      <div className=" my-50 w-full  font-dmsans py-20">
+      <div className="grid grid-cols-9 grid-rows-7 gap-1">
+        {/* ROW 1 */}
+
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px] transition-all duration-1000  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={googleCloudImg} className="w-16 h-14  " />
+          <p className="text-[10px] font-medium "> Google workspace</p>
         </div>
 
-        <div>
-          <div className="grid grid-cols-4 gap-y-14 gap-1">
-            <div>
-             <div className="w-full mb-1 flex justify-between p-2 bg-[#F2F2F2]">
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={entraImg} className="w-16 h-14  " />
+          <p className="text-[10px] font-medium ">Entra ID </p>
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col justify-center items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
-              </div>
+        <div className="w-full h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]"></div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col justify-center items-center">
-              <img className="w-12" src={entraImg} alt="entraImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
-              </div>
+        <div className="w-full h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]"></div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col justify-center items-center">
-              <img className="w-12" src={Okta} alt="Okta" />
-              <p className=" text-[7px] text-center font-medium">Okta</p>
-              </div>
+        <div className="w-full h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]"></div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col justify-center items-center">
-              <img className="w-12 p-1" src={azureActiveLogo} alt="azureActiveLogo" />
-              <p className=" text-[7px] text-center font-medium">Active 
- <br />  directory</p>
-              </div>
-              
-             </div>
-             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
-            </div>
-            {/* 2 */}
-            <div>
-             <div className="w-full mb-1 flex justify-between p-2 bg-[#F2F2F2]">
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={googleCloudImg} className="w-16 h-14  " />
+          <p className="text-[10px] font-medium ">Teams</p>
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
-              <img className="w-12 mb-1" src={circleciLogo} alt="circleciLogo" />
-              <p className=" text-[7px] text-center font-medium">CircleCI </p>
-              </div>
+        <div className="w-full h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+      
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
-              <img className="w-12 mb-1" src={gitHub} alt="gitHub" />
-              <p className=" text-[7px] text-center font-medium">Github </p>
-              </div>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={azureActiveLogo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Active directory</p>
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col justify-center items-center">
-              <img className="w-15 mb-3" src={azureLogo} alt="azureLogo" />
-              <p className=" text-[7px] text-center font-medium">Azure devOps</p>
-              </div>
+        <div className="w-full h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+      
+        </div>
+  {/* 2 row */}
+        <div className="w-full h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+          
+        </div>
+      
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={Okta} className="w-16 h-14  " />
+          <p className="text-[10px] font-medium ">Okta</p>
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col justify-center items-center">
-              <img className="w-10 p-1" src={jenkinsLogo} alt="jenkinsLogo" />
-              <p className=" text-[7px] text-center font-medium">Jenkins</p>
-              </div>
-              
-             </div>
-             <h1 className=" text-[13px] font-medium text-center">DevOps tools & CI/CD pipelines</h1>
-            </div>
-            {/* 3 */}
-            <div>
-             <div className="w-full mb-1 flex justify-between p-2 bg-[#F2F2F2]">
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={awsLogo} className="w-16 h-14  " />
+          <p className="text-[10px] font-medium ">AWS</p>
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
-              <img className="w-12" src={ecrLogo} alt="ecrLogo" />
-              <p className=" text-[7px] text-center font-medium">  ECR</p>
-              </div>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={dockerLogo} className="w-16 h-14  " />
+          <p className="text-[10px] font-medium ">Docker</p>
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
-              <img className="w-15 mb-3" src={azureLogo} alt="AzureLogo" />
-              <p className=" text-[7px] text-center font-medium">Azure</p>
-              </div>
+        <div className="w-full h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+     
+        </div>
+         <div className="w-full h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+    
+        </div>
+         <div className={` ${activeIndex ===2 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={circleciLogo} className="w-16 h-14  " />
+          <p className="text-[10px] font-medium ">Circle CI</p>
+        </div>
+         <div className="w-full h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+        
+        </div>
+         <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={Okta} className="w-16 h-14  " />
+          <p className="text-[10px] font-medium ">Okta</p>
+        </div>
+ {/* 3 row */}
+  <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={GCSLogo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">GCS</p>
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
-              <img className="w-12" src={dockerLogo} alt="Docker" />
-              <p className=" text-[7px] text-center font-medium">Docker</p>
-              </div>
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+        
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col justify-center items-center">
-              <img className="w-12" src={Okta} alt="OktaLogo" />
-              <p className=" text-[7px] text-center font-medium">Okta</p>
-              </div>
-              
-             </div>
-             <h1 className=" text-[13px] font-medium text-center">Container registries</h1>
-            </div>
-              {/* 4*/}
-            <div>
-             <div className="w-full mb-1 flex justify-between p-2 bg-[#F2F2F2]">
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+       
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
-              <img className="w-12 mb-2" src={awsLogo} alt="awsLogo" />
-              <p className=" text-[7px] text-center font-medium">  AWS</p>
-              </div>
+        <div className="w-full text-center col-span-3 row-span-3  flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+         <h1 className="text-[32px] text-[#383838] font-medium">Stackguard integrates with</h1>
+         <h1 className="mb-9 text-[40px] text-[#8631D8] font-medium"> Version control system</h1>
+         <p className=" tet-[18px] text-[#454545]">Secure your entire modern environment <br />from code to cloud.</p>
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
-              <img className="w-15 mb-2" src={azureLogo} alt="AzureLogo" />
-              <p className=" text-[7px] text-center font-medium">Azure</p>
-              </div>
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+        
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
-              <img className="w-12 " src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium"> GCP</p>
-              </div>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={azureblobLogo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Active </p>
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex justify-center flex-col items-center">
-              <img className="w-12 mb-3" src={OracleCloudLogo} alt="OracleCloudLogo" />
-              <p className=" text-[7px] text-center font-medium"> OCI</p>
-              </div>
-              
-             </div>
-             <h1 className=" text-[13px] font-medium text-center">Cloud infrastructure analysis</h1>
-            </div>
-            {/* //2 */}
-            <div>
-             <div className="w-full mb-1 flex justify-between p-2 bg-[#F2F2F2]">
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+       
+        </div>
+        {/* 4 row */}
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12 mb-2" src={azureblobLogo} alt="azureblobLogo" />
-              <p className=" text-[7px] text-center font-medium">GCS</p>
-              </div>
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+     
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12 p-1" src={S3Logo} alt="S3logo" />
-              <p className=" text-[7px] text-center font-medium">S3</p>
-              </div>
-             
-               <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={azureblobLogo} alt="azureblobLogo" />
-              <p className=" text-[7px] text-center font-medium">Azure blob</p>
-              </div>
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+        
+        </div>
+         <div className={` ${activeIndex ===2 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={gitHub} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Active </p>
+        </div>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={gitHub} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Active </p>
+        </div>
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+          
+        </div>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={ecrLogo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Active </p>
+        </div>
+        {/* 5 */}
+         <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={gitlabLogo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Active </p>
+        </div>
+         <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={azureLogo } className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Active </p>
+        </div>
 
-              <div className="w-[74px] h-[74px]  bg-[#FFFFFF] flex justify-center flex-col items-center">
-              <img className="w-12 mb-1" src={onedriveLogo} alt="onedriveLogo" />
-              <p className=" text-[7px] text-center font-medium">One drive</p>
-              </div>
+         <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+     
+        </div>
+         <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+          
+        </div>
+         <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={ecrLogo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Active </p>
+        </div>
+         <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+       
+        </div>
+        {/* 6 */}
+         <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+        
+        </div>
 
-              
-              
-             </div>
-             <h1 className=" text-[13px] font-medium text-center">Cloud storage and buckets</h1>
-            </div>
-            {/* 2 */}
-            <div>
-             <div className="w-full mb-1 flex justify-between p-2 bg-[#F2F2F2]">
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={onedriveLogo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Active </p>
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12 mb-1 " src={gitHub} alt="github" />
-              <p className=" text-[7px] text-center font-medium">GitHub</p>
-              </div>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={S3Logo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Active </p>
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12 mb-1 " src={bitbucketLogo} alt="BitbucketLogo" />
-              <p className=" text-[7px] text-center font-medium">Bitbucket</p>
-              </div>
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+      
+        </div>
 
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12 mb-1 " src={googleCloudImg} alt="AzurerepoLogo" />
-              <p className=" text-[7px]  text-center font-medium">Azure repost</p>
-              </div>
-
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12 mb-1" src={gitlabLogo} alt="GitlabLogo" />
-              <p className=" text-[7px] text-center font-medium">  Gitlab</p>
-              </div>
-              
-             </div>
-             <h1 className=" text-[13px] font-medium text-center">Version control system</h1>
-            </div>
-            {/* 3 */}
-            <div>
-             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
-
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
-              </div>
-
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
-              </div>
-
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
-              </div>
-
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
-              </div>
-              
-             </div>
-             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
-            </div>
-              {/* 4*/}
-            <div>
-             <div className="w-full flex justify-between p-2 bg-[#F2F2F2]">
-
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
-              </div>
-
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
-              </div>
-
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={googleCloudImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
-              </div>
-
-              <div className="w-[74px] h-[74px] p-0.5 bg-[#FFFFFF] flex flex-col items-center">
-              <img className="w-12" src={entraImg} alt="googleCloudImg" />
-              <p className=" text-[7px] text-center font-medium">Google <br />  workspace</p>
-              </div>
-              
-             </div>
-             <h1 className=" text-[13px] font-medium text-center">Service accounts</h1>
-            </div>
-          </div>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+        <img src={ecrLogo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">slack </p>
+        </div>
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
          
         </div>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={ecrLogo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">face </p>
+        </div>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+           <img src={bitbucketLogo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">bit  </p>
+        </div>
+         {/* 7 */}
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+       
+        </div>
+       
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+         
+        </div>
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+         
+        </div>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={OracleCloudLogo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Active </p>
+        </div>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+                   <img src={OracleCloudLogo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Active </p>
+        </div>
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+         
+        </div>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={jenkinsLogo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Active </p>
+        </div>
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+     
+        </div>
+        <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
+       
+        </div>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={ecrLogo} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Active </p>
+        </div>
+
+
+        
+    
+
       </div>
+    </div>
 
       <div className="my-40 mx-[55px]  flex justify-between font-dmsans  ">
         <div className="w-[40%]">

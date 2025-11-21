@@ -35,7 +35,7 @@ import Airtable from "../assets/platformCoverageIcons/Airtable.svg"
 import webex from "../assets/platformCoverageIcons/webex.svg"
 import slack from "../assets/platformCoverageIcons/slack.svg"
 import Googlechat from "../assets/platformCoverageIcons/Googlechat.svg"
-import team from "../assets/platformCoverageIcons/teams.svg"
+import team from "../assets/platformCoverageIcons/Teams.svg"
 
 import Qanda from "../homepageComponents/Qanda.jsx";
 import Footer from "../components/Footer.jsx";

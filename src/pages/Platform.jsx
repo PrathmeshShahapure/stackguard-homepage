@@ -1,15 +1,17 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import findingForServer from "../assets/productpgSS/findingForServer.svg";
 import blastRaius from "../assets/productpgSS/blastRadius.svg";
 import git from "../assets/productpgSS/git.svg";
 import adminPriv from "../assets/productpgSS/adminPriv.svg";
 import sysOverview from "../assets/productpgSS/sysOverview.svg";
+import plathfrompgDai from "../assets/productpgSS/plathfrompgDai.svg";
 import Footer from "../components/Footer";
 const Platform = () => {
   return (
     <>
-      <div className="my-5  mt-[120px] mx-[54px] font-dmsans">
-        <div className=" mt-10 font-dmsans text-center mx-10 ">
+      <div className="my-5  mt-[120px]  font-dmsans">
+        <div className=" mt-10 mx-[54px] font-dmsans text-center  ">
           <h1 className=" font-medium text-[64px] mb-6 leading-none ">
            Remediation first-NHI platform
           </h1>
@@ -19,22 +21,27 @@ const Platform = () => {
             accounts, keys, and tokens dominate your attack surface
           </p>
           <div className="flex justify-center gap-2 my-4">
-            <button
-              className="px-2 md:px-4  h-10  text-lg   rounded-full text-white bg-[#44087D]"
-              type="button"
-            >
-              Book a demo
-            </button>
-            <button
-              className="px-2  md:px-4 h-10   text-lg  rounded-full text-black border border-[#44087D]"
-              type="button"
-            >
-              Book a risk free assessment
+              <Link  to="/riskassessment"
+            className="px-2 py-1 md:px-4 h-10 bg-[#44087D] font-medium  text-[19px]  rounded-full text-[#ffffff] border "
+            type="button"
+          >
+            Get a free risk assessment
+          </Link>
+          <button className="px-2 py-1 md:px-4 h-10 font-medium  text-[19px]  rounded-full text-[#282828] border border-[#D1D1D1]"
+            type="button"> 
+             See it in action
             </button>
           </div>
         </div>
+        <div className="mt-20">
+          <img src={plathfrompgDai} alt="diagram" />
+          
+        </div>
 
-        <div className="my-40 ">
+        <div className="w-[100%] h-25 bg-[repeating-linear-gradient(to_right,#C0C0C0_0px,#C0C0C0_2px,transparent_1px,transparent_8px)] border border-[#C0C0C0]"></div>
+
+
+        <div className="my-40 mx-[54px] ">
           <ul>
             <li className="my-40 flex justify-between">
               <div className="w-[40%] space-y-4">

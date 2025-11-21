@@ -8,13 +8,13 @@ const Navbar = () => {
   const [isOpen,setIsOpen]=useState(false);
   return (
     <> 
-    <nav className="font-dmsans text-[22px] px-4 md:px-10    bg-[white] flex items-center justify-between  h-9 my-5 ">
-      
+    <nav className=" w-full font-dmsans text-[22px] px-4 md:px-10    bg-[white] flex items-center justify-between  h-9 my-5 ">
+      <div className="w-[60%] flex justify-between items-center">
       <Link to="/" onClick={()=>setIsOpen(false)} className="flex items-center gap-1 outline-none" ><img src={logo} alt="logo" /> StackGuard</Link>
         
      
       <div className="hidden   md:flex gap-5">
-        <Link  to="/product" className="text-[#817D7D]">
+        <Link  to="/platform" className="text-[#817D7D]">
           Platform
         </Link>
         <Link to="/resources"  className="text-[#817D7D]" >
@@ -24,10 +24,11 @@ const Navbar = () => {
           About us
         </Link>
       </div>
+      </div>
 
-      <div className=" hidden md:flex items-center gap-5">
+      <div className=" w-[40%] hidden md:flex justify-end gap-4 items-center ">
         <Link to="/contactus" className="" >Contact us</Link>
-        <button className="text-[18px] w-[66px] px-3 py-1 rounded-full text-white bg-[#44087D]" type="button">Risk </button>
+        <Link to="/riskassessment" className="text-[18px]  px-3 py-1 rounded-full text-white bg-[#44087D]" type="button">Get a free NHI risk assessment </Link>
       </div>
       
       <button className="md:hidden " 

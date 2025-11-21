@@ -1,5 +1,7 @@
 import {useState,React } from "react";
 import x from "../assets/x.svg";
+import chevrondown from "../assets/chevron-down.svg"
+import chevronup from "../assets/chevron-up.svg"
 const Qanda = ({id,question,ans}) => {
 
  const [isSelected, setIsSelected] = useState(null);
@@ -122,7 +124,7 @@ const Qanda = ({id,question,ans}) => {
                   className={`p-2 rounded-full ${
                     isSelected === item.id ? "bg-[#F5EAFF]" : "bg-white"
                   }`}
-                  src={x}
+                  src={`${isSelected ? chevronup :chevrondown}`}
                   alt="toggle"
                 />
               </button>

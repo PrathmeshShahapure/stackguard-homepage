@@ -28,6 +28,14 @@ import azureblobLogo from "../assets/platformCoverageIcons/azureblobLogo.svg"
 import onedriveLogo from "../assets/platformCoverageIcons/onedriveLogo.svg"
 import bitbucketLogo from "../assets/platformCoverageIcons/bitbucketLogo.svg"
 import gitlabLogo from "../assets/platformCoverageIcons/gitlabLogo.svg"
+import postman from "../assets/platformCoverageIcons/postman.svg"
+import huggingface from "../assets/platformCoverageIcons/huggingface.svg"
+import snowflake from "../assets/platformCoverageIcons/snowflake.svg"
+import Airtable from "../assets/platformCoverageIcons/Airtable.svg"
+import webex from "../assets/platformCoverageIcons/webex.svg"
+import slack from "../assets/platformCoverageIcons/slack.svg"
+import Googlechat from "../assets/platformCoverageIcons/Googlechat.svg"
+import team from "../assets/platformCoverageIcons/teams.svg"
 
 import Qanda from "../homepageComponents/Qanda.jsx";
 import Footer from "../components/Footer.jsx";
@@ -42,15 +50,17 @@ const Home = () => {
     { id: 4, title: "Cloud infrastructure analysis" },
     { id: 5, title: "Cloud storage and buckets" },
     { id: 6, title: "Version control system" },
+    { id: 7, title: "other sass application" },
+    { id: 8, title: "chat application" },
   ];
   useEffect(()=>{
     const interval = setInterval(()=>{
-      setActiveIndex((prev)=> (prev+1) % 3  );
+      setActiveIndex((prev)=> (prev%8) + 1  );
     },2000)
     return () => clearInterval(interval);
   },[])
 
-  console.log(activeIndex);
+ 
 
   return (
     <> 
@@ -66,11 +76,15 @@ const Home = () => {
         <div className="flex justify-center gap-2 my-4">
          
           <Link  to="/riskassessment"
-            className="px-2 py-1 md:px-4 h-10 font-medium  text-[19px]  rounded-full text-black border border-[#44087D]"
+            className="px-2 py-1 md:px-4 h-10 bg-[#44087D] font-medium  text-[19px]  rounded-full text-[#ffffff] border "
             type="button"
           >
             Get a free risk assessment
           </Link>
+          <button className="px-2 py-1 md:px-4 h-10 font-medium  text-[19px]  rounded-full text-[#282828] border border-[#D1D1D1]"
+            type="button"> 
+             See it in action
+            </button>
         </div>
       </div>
       <div className="relative w-full mt-14">
@@ -247,7 +261,7 @@ const Home = () => {
           <p className="text-[10px] font-medium "> Google workspace</p>
         </div>
 
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
           <img src={entraImg} className="w-16 h-14  " />
           <p className="text-[10px] font-medium ">Entra ID </p>
         </div>
@@ -258,8 +272,8 @@ const Home = () => {
 
         <div className="w-full h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]"></div>
 
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
-          <img src={googleCloudImg} className="w-16 h-14  " />
+        <div className={` ${activeIndex ===8 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={team} className="w-16 h-14  " />
           <p className="text-[10px] font-medium ">Teams</p>
         </div>
 
@@ -267,7 +281,7 @@ const Home = () => {
       
         </div>
 
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000 w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
           <img src={azureActiveLogo} className=" w-16 h-3/4 mb-1  " />
           <p className="text-[10px] font-medium ">Active directory</p>
         </div>
@@ -280,17 +294,17 @@ const Home = () => {
           
         </div>
       
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
           <img src={Okta} className="w-16 h-14  " />
           <p className="text-[10px] font-medium ">Okta</p>
         </div>
 
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+        <div className={` ${activeIndex ===4 ? " bg-[#B35FF952]" : "bg-white"}   transition-all duration-1000 w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
           <img src={awsLogo} className="w-16 h-14  " />
           <p className="text-[10px] font-medium ">AWS</p>
         </div>
 
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+        <div className={` ${activeIndex ===3 ? " bg-[#B35FF952]" : "bg-white"} transition-all duration-1000  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
           <img src={dockerLogo} className="w-16 h-14  " />
           <p className="text-[10px] font-medium ">Docker</p>
         </div>
@@ -301,19 +315,19 @@ const Home = () => {
          <div className="w-full h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
     
         </div>
-         <div className={` ${activeIndex ===2 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+         <div className={` ${activeIndex === 2 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
           <img src={circleciLogo} className="w-16 h-14  " />
           <p className="text-[10px] font-medium ">Circle CI</p>
         </div>
          <div className="w-full h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
         
         </div>
-         <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
-          <img src={Okta} className="w-16 h-14  " />
-          <p className="text-[10px] font-medium ">Okta</p>
+         <div className={` ${activeIndex ===5 ? " bg-[#B35FF952]" : "bg-white"} transition-all duration-1000  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={snowflake} className="w-16 h-1/2 mb-2  " />
+          <p className="text-[10px] font-medium ">snowflake</p>
         </div>
  {/* 3 row */}
-  <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+  <div className={` ${activeIndex ===5 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000 w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
           <img src={GCSLogo} className=" w-16 h-3/4 mb-1  " />
           <p className="text-[10px] font-medium ">GCS</p>
         </div>
@@ -336,9 +350,9 @@ const Home = () => {
         
         </div>
 
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
-          <img src={azureblobLogo} className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">Active </p>
+        <div className={` ${activeIndex ===5 ? " bg-[#B35FF952]" : "bg-white"} transition-all duration-1000  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={azureblobLogo} className=" w-16 h-1/2 mb-1  " />
+          <p className="text-[10px] font-medium ">Azure Blob </p>
         </div>
 
         <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
@@ -353,29 +367,29 @@ const Home = () => {
         <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
         
         </div>
-         <div className={` ${activeIndex ===2 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
-          <img src={gitHub} className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">Active </p>
+         <div className={` ${[2, 3].includes(activeIndex) ? "bg-[#B35FF952]" : "bg-white"} transition-all duration-1000  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={gitHub} className=" w-16 h-1/2 mb-1  " />
+          <p className="text-[10px] font-medium ">Git Hub </p>
         </div>
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
-          <img src={gitHub} className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">Active </p>
+        <div className={` ${activeIndex ===7 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000 w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={Airtable} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Air Table </p>
         </div>
         <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
           
         </div>
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+        <div className={` ${activeIndex ===3 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
           <img src={ecrLogo} className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">Active </p>
+          <p className="text-[10px] font-medium ">ECR </p>
         </div>
         {/* 5 */}
-         <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+         <div className={` ${activeIndex === 2 || activeIndex === 6 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000 w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
           <img src={gitlabLogo} className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">Active </p>
+          <p className="text-[10px] font-medium ">GitLab </p>
         </div>
-         <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+         <div className={` ${activeIndex ===6 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000 w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
           <img src={azureLogo } className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">Active </p>
+          <p className="text-[10px] font-medium ">Azure Repo </p>
         </div>
 
          <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
@@ -384,9 +398,9 @@ const Home = () => {
          <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
           
         </div>
-         <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
-          <img src={ecrLogo} className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">Active </p>
+         <div className={` ${activeIndex ===8 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000 w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={Googlechat} className=" w-16 h-1/2 mb-1  " />
+          <p className="text-[10px] font-medium ">Google Chat </p>
         </div>
          <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
        
@@ -396,34 +410,34 @@ const Home = () => {
         
         </div>
 
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+        <div className={` ${activeIndex ===5 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
           <img src={onedriveLogo} className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">Active </p>
+          <p className="text-[10px] font-medium ">One Drive </p>
         </div>
 
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+        <div className={` ${activeIndex === 5 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
           <img src={S3Logo} className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">Active </p>
+          <p className="text-[10px] font-medium ">S3 </p>
         </div>
 
         <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
       
         </div>
 
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
-        <img src={ecrLogo} className=" w-16 h-3/4 mb-1  " />
+        <div className={` ${activeIndex ===8 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+        <img src={slack}  alt="slack" className=" w-16 h-1/2 mb-1  " />
           <p className="text-[10px] font-medium ">slack </p>
         </div>
         <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
          
         </div>
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
-          <img src={ecrLogo} className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">face </p>
+        <div className={` ${activeIndex ===7 ? " bg-[#B35FF952]" : "bg-white"} transition-all duration-1000 w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={huggingface} alt="huggingface" className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Hugging face </p>
         </div>
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+        <div className={` ${activeIndex === 2 || activeIndex === 6 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000 w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
            <img src={bitbucketLogo} className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">bit  </p>
+          <p className="text-[10px] font-medium ">Bitbucket  </p>
         </div>
          {/* 7 */}
         <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
@@ -436,20 +450,20 @@ const Home = () => {
         <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
          
         </div>
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
-          <img src={OracleCloudLogo} className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">Active </p>
+        <div className={` ${activeIndex ===4 ? " bg-[#B35FF952]" : "bg-white"}  transition-all duration-1000 w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={OracleCloudLogo} className=" w-16 h-1/2 mb-1  " />
+          <p className="text-[10px] font-medium ">OCI </p>
         </div>
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
-                   <img src={OracleCloudLogo} className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">Active </p>
+        <div className={` ${activeIndex ===7 ? " bg-[#B35FF952]" : "bg-white"} transition-all duration-1000 w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+                   <img src={postman} alt="postman" className=" w-16 h-1/2 mb-1  " />
+          <p className="text-[10px] font-medium ">Postman </p>
         </div>
         <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
          
         </div>
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+        <div className={` ${activeIndex ===2  ? " bg-[#B35FF952]" : "bg-white"}   transition-all duration-1000 w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
           <img src={jenkinsLogo} className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">Active </p>
+          <p className="text-[10px] font-medium ">Jenkins </p>
         </div>
         <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
      
@@ -457,9 +471,9 @@ const Home = () => {
         <div className="w-full p-2 h-[74px] flex flex-col items-center justify-center bg-white border border-[#E5E5E5]">
        
         </div>
-        <div className={` ${activeIndex ===1 ? " bg-[#B35FF952]" : "bg-white"}  w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
-          <img src={ecrLogo} className=" w-16 h-3/4 mb-1  " />
-          <p className="text-[10px] font-medium ">Active </p>
+        <div className={` ${activeIndex === 8 ? " bg-[#B35FF952]" : "bg-white"} transition-all duration-1000 w-full h-[74px]  flex flex-col items-center justify-center  border border-[#E5E5E5]`}>
+          <img src={webex} className=" w-16 h-3/4 mb-1  " />
+          <p className="text-[10px] font-medium ">Webex </p>
         </div>
 
 
